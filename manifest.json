@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Calculadora de Propinas",
+    "version": "1.0",
+    "description": "Una extensión que calcula propinas rápidamente.",
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "pov16.png",
+            "48": "pov48.png",
+            "128": "pov128.png"
+        }
+    },
+    "icons": {
+        "16": "pov16.png",
+        "48": "pov48.png",
+        "128": "pov128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["script.js"]
+        }
+    ]
+}
